@@ -9,8 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function run() {
+    var age = window.prompt(`How old are you?`);
+    var gender = window.prompt(`What's your gender?`);
+    var town = window.prompt(`Which town do you live in?`)
+    var confirmation = window.confirm(`You are ${age} years old. You are a ${gender}. You live in ${town}.`)
+    if (confirmation == false) {
+        run();
+    }
 })();

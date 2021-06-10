@@ -10,7 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    var greeting = `Hello, World!`;
+    window.alert(greeting)
 })();
+
+

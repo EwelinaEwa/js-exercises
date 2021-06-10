@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    var name = window.prompt(`What's your name?`)
+    window.alert(`Hello, ${name}!`)
 
 })();

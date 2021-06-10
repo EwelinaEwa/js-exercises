@@ -11,6 +11,12 @@
 
 (function() {
 
-  // your code here
+    var wantsCake = window.prompt(`Do you want some cake?`)
+    if (wantsCake == `yes`) {
+        window.alert(`Congratulations`)
+    }
+    else {
+        window.alert(`More cake for me then :p !`)
+    }
 
 })();
