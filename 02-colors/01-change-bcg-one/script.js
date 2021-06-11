@@ -9,8 +9,21 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (function() {
+    document.getElementById("red").onclick = function() {
+        document.body.style.backgroundColor = "red";
+    }
 
-    // your code here
+    document.getElementById("green").onclick = function() {
+        document.body.style.backgroundColor = "green";
+    }
 
+    document.getElementById("yellow").onclick = function() {
+        document.body.style.backgroundColor = "yellow";
+    }
+
+    document.getElementById("blue").onclick = function() {
+        document.body.style.backgroundColor = "blue";
+    }
 })();
