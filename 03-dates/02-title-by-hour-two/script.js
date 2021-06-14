@@ -15,4 +15,18 @@
 
     // your code here
 
+    const d = new Date();
+    const hour = d.getHours();
+    const minutes = d.getMinutes();
+
+    if (hour>=17 & minutes>30) {
+        document.getElementById("target").innerHTML = "Good evening"
+    }
+    else if (hour >17) {
+        document.getElementById("target").innerHTML = "Good evening"
+    }
+    else {
+        document.getElementById("target").innerHTML = "Hello"
+    }
+
 })();
