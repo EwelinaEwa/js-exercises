@@ -11,6 +11,9 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").onclick = function () {
+        let backColor = document.getElementById("color").value;
+        document.body.style.backgroundColor = backColor;
+    }
 
 })();

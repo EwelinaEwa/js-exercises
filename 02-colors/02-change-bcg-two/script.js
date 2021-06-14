@@ -12,6 +12,6 @@
 (function() {
     document.getElementById("run").onclick = function () {
         let backColor = document.getElementById("color").value;
-        document.body.style.backgroundColor = document.getElementById("color").value;
+        document.body.style.backgroundColor = backColor;
     }
 })();
