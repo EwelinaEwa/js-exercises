@@ -10,6 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", function() {
     let year = document.getElementById("dob-year").value;
     let month = document.getElementById("dob-month").value;
     let day = document.getElementById("dob-day").value;
@@ -26,6 +27,7 @@
         return age;
     }
 
-    console.log(getAge(birthDay));
 
+    console.log(getAge(birthDay));
+    });
 })();
