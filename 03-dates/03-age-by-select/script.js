@@ -10,7 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    let year = document.getElementById("dob-year").value;
+    let month = document.getElementById("dob-month").value;
+    let day = document.getElementById("dob-day").value;
+    let birthDay = `${year}-${month}-${day}`;
+    console.log(birthDay)
+    function getAge(selectedDate) {
+        let today = new Date();
+        let birthDate = new Date(selectedDate);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
 
-    // your code here
+    console.log(getAge(birthDay));
 
 })();
