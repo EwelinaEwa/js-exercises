@@ -15,4 +15,18 @@
 
     // your code here
 
+    // const d = new Date();
+    // document.getElementById("demo").innerHTML = d.getHours();
+
+    const d = new Date();
+    const hour = d.getHours()
+
+    if (hour<18) {
+        document.getElementById("target").innerHTML = "Hello"
+    }
+    else {
+        document.getElementById("target").innerHTML = "Good evening"
+    }
+
+
 })();
