@@ -18,7 +18,7 @@
         const one = document.getElementById("op-one")
         const two = document.getElementById("op-two")
         const result = parseInt(one.value) + parseInt(two.value);
-        document.write(result)
+        console.log(result)
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
@@ -26,7 +26,7 @@
         const one = document.getElementById("op-one")
         const two = document.getElementById("op-two")
         const result = parseInt(one.value) - parseInt(two.value);
-        document.write(result)
+        console.log(result)
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
@@ -34,7 +34,7 @@
         const one = document.getElementById("op-one")
         const two = document.getElementById("op-two")
         const result = parseInt(one.value) * parseInt(two.value);
-        document.write(result)
+        console.log(result)
     });
 
     document.getElementById("division").addEventListener("click", function() {
@@ -42,6 +42,6 @@
         const one = document.getElementById("op-one")
         const two = document.getElementById("op-two")
         const result = parseInt(one.value) / parseInt(two.value);
-        document.write(result)
+        console.log(result)
     });
 })();

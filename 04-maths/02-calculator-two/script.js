@@ -32,7 +32,7 @@
                 result =  one / two;
                 break;
         }
-        document.write(result);
+        console.log(result);
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
