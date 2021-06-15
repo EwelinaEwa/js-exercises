@@ -11,23 +11,26 @@
 
 (function() {
     document.getElementById("run").addEventListener("click", function() {
-    let year = document.getElementById("dob-year").value;
-    let month = document.getElementById("dob-month").value;
-    let day = document.getElementById("dob-day").value;
-    let birthDay = `${year}-${month}-${day}`;
+    let yearElement = document.getElementById("dob-year").value;
+    let monthElement = document.getElementById("dob-month").value;
+    let dayElement = document.getElementById("dob-day").value;
+    let birthDay = `${yearElement}-${monthElement}-${dayElement}`;
     console.log(birthDay)
-    function getAge(selectedDate) {
+    function getAge(birthDay) {
         let today = new Date();
-        let birthDate = new Date(selectedDate);
-        let age = today.getFullYear() - birthDate.getFullYear();
-        let m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        return age;
+        let birthDate = new Date(birthDay);
+        // let age = today.getFullYear() - birthDate.getFullYear();
+        // let m = today.getMonth() - birthDate.getMonth();
+        // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        //     age--;
+        // }
+            var ageDifMs = today - birthDate.getTime();
+            var ageDate = new Date(ageDifMs);
+            var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
+            return age
     }
 
-
     console.log(getAge(birthDay));
+
     });
 })();
