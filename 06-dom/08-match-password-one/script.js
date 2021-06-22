@@ -13,4 +13,16 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function () {
+        let psswd = document.getElementById("pass-one").value;
+        console.log(psswd)
+        let psswdCheck = document.getElementById("pass-two").value;
+        console.log(psswdCheck)
+
+        if (psswd !== psswdCheck) {
+            document.getElementById("pass-one").style.borderColor = "red"
+            document.getElementById("pass-two").style.borderColor = "red"
+        }
+    })
+
 })();
