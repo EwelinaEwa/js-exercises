@@ -12,13 +12,12 @@
 (function() {
 
     // your code here
-    // let img = document.createElement("img");
-    // img.src = "http://www.randomkittengenerator.com/cats/rotator.php"
-    // document.getElementById("target").appendChild(img)
 
-    let imgAttribute = document.querySelector("#source").getAttribute("data-image");
+    let imgSource = document.querySelector("#source");
+    let imgAttribute = imgSource.getAttribute("data-image");
     let img = document.createElement("img");
     img.src = imgAttribute;
     document.getElementById("target").appendChild(img);
+    imgSource.remove();
 
 })();
