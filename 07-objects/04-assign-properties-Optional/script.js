@@ -28,14 +28,16 @@
     };
     // your code here
 
-    for (let i=0; i<computers.length; i++) {
-        if (computers.available[i] !== undefined) {
-            computers.available[i] = computers.available[i];
-        }
-        else if (computers.available[i] === "") {
-            computers.available[i] = defaultProps.available
+    document.getElementById("run").addEventListener("click", function (){
+        for (let i=0; i <computers.length; i++) {
+            computers[i] = {
+                ...defaultProps,
+                ...computers[i]
+            };
         }
         console.log(computers)
-    }
+    });
+
+
 
 })();
