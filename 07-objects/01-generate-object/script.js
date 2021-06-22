@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    let me = {
+        lastname: "Kosciukiewicz",
+        firstname: "Ewelina",
+        age: "forever 25",
+        city: "Tielt",
+        country: "Belgium"
+    }
+
+    console.log(`Hi! My name is ${me.firstname} ${me.lastname}. I am ${me.age} years old. I live in ${me.city}, ${me.country}.`)
+
 })();
