@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").addEventListener("input", function () {
+        let length = document.getElementById("pass-one").value.length
+        let input = document.getElementById("pass-one")
+        document.getElementById("counter").innerText = `${length}/10`
+        if (length >= 10) {
+            input.value = input.value.substr(0, 9);
+        }
+    })
 
 })();
