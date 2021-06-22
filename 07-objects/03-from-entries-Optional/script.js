@@ -13,4 +13,17 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+
+   for (let i=0; i < keys.length; i++) {
+       const entries = new Map([
+           [keys[i], values[i]]
+       ])
+
+       const obj = Object.fromEntries(entries)
+
+       document.getElementById("run").addEventListener("click", function () {
+           console.log(obj)
+
+       })
+   }
 })();
