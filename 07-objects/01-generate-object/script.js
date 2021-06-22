@@ -18,7 +18,8 @@
         city: "Tielt",
         country: "Belgium"
     }
-
-    console.log(`Hi! My name is ${me.firstname} ${me.lastname}. I am ${me.age} years old. I live in ${me.city}, ${me.country}.`)
+    document.getElementById("run").addEventListener("click", function () {
+        console.log(`Hi! My name is ${me.firstname} ${me.lastname}. I am ${me.age} years old. I live in ${me.city}, ${me.country}.`)
+    })
 
 })();
