@@ -27,4 +27,15 @@
         user: null,
     };
     // your code here
+
+    for (let i=0; i<computers.length; i++) {
+        if (computers.available[i] !== undefined) {
+            computers.available[i] = computers.available[i];
+        }
+        else if (computers.available[i] === "") {
+            computers.available[i] = defaultProps.available
+        }
+        console.log(computers)
+    }
+
 })();
