@@ -12,5 +12,15 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        let psswd = document.getElementById("pass-one").value;
+        let psswdCheck = document.getElementById("pass-two").value;
+
+        if (psswd !== psswdCheck) {
+            document.getElementById("pass-one").classList.add("error");
+            document.getElementById("pass-two").classList.add("error");
+        }
+    })
+
 
 })();
