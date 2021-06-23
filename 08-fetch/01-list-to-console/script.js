@@ -9,4 +9,14 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        fetch('http://localhost:63342/js-exercises/_shared/api.json.')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+            });
+    })
+
 })();
