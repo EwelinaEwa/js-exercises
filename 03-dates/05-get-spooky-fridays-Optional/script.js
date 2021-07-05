@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let year = document.getElementById("year").value;
+        let startDate = new Date(year, 0, 1);
+        // console.log(startDate)
+        let endDate = new Date(year, 11, 31)
+        // console.log(endDate)
+        for (let day = startDate; day <=endDate; day.setDate(day.getDate()+1)){
+            if (day.getDate() === 13 && day.getDay() === 5) {
+                console.log(day)
+            }
+        }
+    })
 
 })();
