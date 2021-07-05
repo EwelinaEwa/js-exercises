@@ -9,20 +9,26 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function randomBackground() {
+//
+// (function randomBackground() {
+//
+//     function generateRandomColor() {
+//         var letters = '0123456789ABCDEF';
+//         var color = '#';
+//         for (var i = 0; i < 6; i++) {
+//             color += letters[Math.floor(Math.random() * 16)];
+//         }
+//         return color;
+//     }
+//
+//     var backColor = generateRandomColor();
+//
+//     document.getElementById("run").onclick = function generateRandomColor() {
+//         document.body.style.backgroundColor = backColor;
+//     }
+// })();
 
-    function generateRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 
-    var backColor = generateRandomColor();
-
-    document.getElementById("run").onclick = function generateRandomColor() {
-        document.body.style.backgroundColor = backColor;
-    }
-})();
+document.getElementById("run").addEventListener("click", () => {
+document.body.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`
+})
