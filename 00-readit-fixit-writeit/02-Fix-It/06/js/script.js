@@ -62,12 +62,25 @@ const shows = [
   },
 ];
 
+// //Original code:
+//
+// const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
+//
+// const topScoreFilter = show => { };
+//
+// shows.filter(topScoreFilter);
+//
+// document.write(`<ol>`);
+// shows.forEach(show => document.write(wrapWithTag(show.title, `li`)));
+// document.write(`</ol>`);
+
+
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
-const topScoreFilter = show => { };
+const topScoreFilter = shows.filter(show => show.score > 90);
+console.log(topScoreFilter)
 
-shows.filter(topScoreFilter);
 
 document.write(`<ol>`);
-shows.forEach(show => document.write(wrapWithTag(show.title, `li`)));
+topScoreFilter.forEach(show => document.write(wrapWithTag(`${show.title} (${show.score}%)`, `li`)));
 document.write(`</ol>`);
