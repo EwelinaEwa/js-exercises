@@ -15,4 +15,10 @@
 
     // your code here
 
+    let date = new Date()
+    let day = date.toLocaleDateString("us-en", {weekday: 'long'})
+    let month = date.toLocaleDateString("us-en", {month: 'long'})
+
+    document.getElementById("target").innerHTML = `${day} ${date.getDate()} ${month} ${date.getFullYear()}, ${date.getHours()}h${date.getMinutes()} `;
+
 })();
