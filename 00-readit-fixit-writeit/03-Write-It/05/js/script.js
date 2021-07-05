@@ -32,3 +32,5 @@ const extras = [
     title : "Supplement Atmos"
   }
 ];
+
+fees.forEach(element => extras.forEach(item => document.write(`<li>${element.title}: ${element.price}</li><li>${item.title}: ${item.price}</li><li>Total: ${element.price + item.price}</li><br>`)));
