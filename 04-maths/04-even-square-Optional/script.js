@@ -9,17 +9,25 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+// (function() {
+//
+//     document.getElementById("run").addEventListener("click", function() {
+//
+//         // your code here
+//         for (let i = 1; i <= 21; i++) {
+//             if (Number.isInteger(Math.sqrt(i)) === true) {
+//                 console.log(i)
+//             }
+//         }
+//
+//     });
+//
+// })();
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-        for (let i = 1; i <= 21; i++) {
-            if (Number.isInteger(Math.sqrt(i)) === true) {
-                console.log(i)
-            }
+document.getElementById("run").addEventListener("click", () => {
+    for (let i=1; i <=21; i++) {
+        if (Number.isInteger(Math.sqrt(i))) {
+            console.log(i)
         }
-
-    });
-
-})();
+    }
+})

@@ -9,35 +9,63 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    // to get the value of an input: document.getElementById("element-id").value
+// (function() {
+//     // to get the value of an input: document.getElementById("element-id").value
+//
+//     var performOperation = function(operation) {
+//         // perform the operation
+//         let result;
+//         let one = parseInt(document.getElementById("op-one").value);
+//         let two = parseInt(document.getElementById("op-two").value);
+//
+//         switch(operation) {
+//             case "addition":
+//                 result =  one + two;
+//                 break;
+//             case "substraction":
+//                 result =  one - two;
+//                 break;
+//             case "multiplication":
+//                 result =  one * two;
+//                 break;
+//             case "division":
+//                 result =  one / two;
+//                 break;
+//         }
+//         console.log(result);
+//     };
+//
+//     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
+//         $btn.addEventListener("click", function() {
+//             performOperation($btn.id);
+//         });
+//     });
+// })();
 
-    var performOperation = function(operation) {
-        // perform the operation
+
+let operators = document.querySelectorAll(".operator");
+for (let selectedOperator of operators) {
+    selectedOperator.addEventListener("click", () => {
+        let one = Number(document.getElementById("op-one").value);
+        let two = Number(document.getElementById("op-two").value);
         let result;
-        let one = parseInt(document.getElementById("op-one").value);
-        let two = parseInt(document.getElementById("op-two").value);
-
-        switch(operation) {
+        switch(selectedOperator.id) {
             case "addition":
-                result =  one + two;
+                result = one + two;
                 break;
             case "substraction":
-                result =  one - two;
+                result = one - two;
                 break;
             case "multiplication":
-                result =  one * two;
+                result = one * two;
                 break;
             case "division":
-                result =  one / two;
+                result = one / two;
                 break;
         }
-        console.log(result);
-    };
+        console.log(result)
+    })
+}
 
-    Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
-        $btn.addEventListener("click", function() {
-            performOperation($btn.id);
-        });
-    });
-})();
+
+

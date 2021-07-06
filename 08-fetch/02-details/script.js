@@ -12,7 +12,7 @@
 
 
 
-        fetch('http://localhost:63342/js-exercises/_shared/api.json.')
+        fetch('https://api.openweathermap.org/data/2.5/forecast?q=Tielt&units=metric&APPID=f1fe3a5b2ff45140872785bfb2753205')
             .then((response) => {
                 return response.json()
             })
