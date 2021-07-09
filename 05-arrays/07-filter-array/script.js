@@ -90,8 +90,14 @@
     ];
 
     // your code here
-    document.getElementById("run").addEventListener("click", function () {
-        let adults = people.filter(people => people.age > 18)
-        console.log(adults)
-    });
+    // document.getElementById("run").addEventListener("click", function () {
+    //     let adults = people.filter(people => people.age > 18)
+    //     console.log(adults)
+    // });
+
+    document.getElementById("run").addEventListener("click", () => {
+        let adult = people.filter(person => person.age > 18);
+        console.log(adult)
+    })
+
 })();

@@ -25,11 +25,19 @@
     ];
 
     // your code here
-    document.getElementById("run").addEventListener("click", function() {
-        fruits.pop()
-        fruits.shift()
-        fruits.unshift("banana")
-        fruits.push("kiwi")
+    // document.getElementById("run").addEventListener("click", function() {
+    //     fruits.pop()
+    //     fruits.shift()
+    //     fruits.unshift("banana")
+    //     fruits.push("kiwi")
+    //     console.log(fruits)
+    // });
+
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("banana");
+        fruits.push("kiwi");
         console.log(fruits)
-    });
+    })
 })();
